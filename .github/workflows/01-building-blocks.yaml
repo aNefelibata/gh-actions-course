@@ -1,7 +1,7 @@
 name: 01 - Building Blocks
 
 on: push
-on: worflow_dispatch
+
 
 jobs:
     echo-hello:
