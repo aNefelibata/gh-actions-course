@@ -17,7 +17,7 @@ on:
             default: 20.x
 jobs:
     build:
-        runs-on: ubutu-latest
+        runs-on: ubuntu-latest
         defaults:
             run:
                 working-directory: 13-caching/react-app #makes it so with run is used it will go to this directory
