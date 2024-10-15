@@ -20,7 +20,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-                working-directory: .github\workflows\13-caching\react-app #makes it so with run is used it will go to this directory
+                working-directory: 13-caching/react-app #makes it so with run is used it will go to this directory
         steps: 
             - name: Checkout code
               uses: actions/checkout@v4
