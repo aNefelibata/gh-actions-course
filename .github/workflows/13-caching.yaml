@@ -7,19 +7,27 @@ on:
             description: Whether to execute cache step
             type: boolean
             default: true
+        node-version:
+            description: Node version
+            type: choice
+            options:
+                - 18.x
+                - 20.x
+                - 21.x
+            default: 20.x
 jobs:
     build:
         runs-on: ubutu-latest
         defaults:
             run:
-                working directory: 13-caching/react-app #makes it so with run is used it will go to this directory
+                working-directory: 13-caching/react-app #makes it so with run is used it will go to this directory
         steps: 
             - name: Checkout code
               uses: actions/checkout@v4
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
-                node-version: '20.x'
+                node-version: ${{inputs.node-version}}
             - name: Install dependencies
               run: npm ci
             - name: Testing
