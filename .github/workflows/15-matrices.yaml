@@ -18,7 +18,7 @@ jobs:
                       node-version: 16.x
                     - os: ubuntu-latest
                       node-version: 21.x
-                      tag: eperimental
+                      tag: experimental
 
         steps:
             - name: Setup node
