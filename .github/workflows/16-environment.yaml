@@ -8,7 +8,7 @@ on:
                 default: staging
 jobs:
     echo:
-        runs-on: unbuntu-latest
+        runs-on: ubuntu-latest
         environment: ${{inputs.target-env}}
         env: 
             my-env-value: ${{vars.My_ENV_Value || 'default value'}}
